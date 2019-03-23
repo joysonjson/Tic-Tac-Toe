@@ -12,6 +12,7 @@
 		6909EE072237CDE80061F457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6909EE052237CDE80061F457 /* Main.storyboard */; };
 		6909EE092237CDEA0061F457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6909EE082237CDEA0061F457 /* Assets.xcassets */; };
 		6909EE0C2237CDEA0061F457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6909EE0A2237CDEA0061F457 /* LaunchScreen.storyboard */; };
+		6909EE142237D2900061F457 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909EE132237D2900061F457 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		6909EE082237CDEA0061F457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6909EE0B2237CDEA0061F457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6909EE0D2237CDEA0061F457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6909EE132237D2900061F457 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		69EEAA552245065F00441D53 /* TicTacToe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TicTacToe.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +57,10 @@
 		6909EE002237CDE80061F457 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				69EEAA552245065F00441D53 /* TicTacToe.entitlements */,
 				6909EE012237CDE80061F457 /* AppDelegate.swift */,
 				6909EE032237CDE80061F457 /* ViewController.swift */,
+				6909EE132237D2900061F457 /* MyCollectionViewCell.swift */,
 				6909EE052237CDE80061F457 /* Main.storyboard */,
 				6909EE082237CDEA0061F457 /* Assets.xcassets */,
 				6909EE0A2237CDEA0061F457 /* LaunchScreen.storyboard */,
@@ -96,6 +101,11 @@
 				TargetAttributes = {
 					6909EDFD2237CDE80061F457 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,6 +147,7 @@
 			files = (
 				6909EE042237CDE80061F457 /* ViewController.swift in Sources */,
 				6909EE022237CDE80061F457 /* AppDelegate.swift in Sources */,
+				6909EE142237D2900061F457 /* MyCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,14 +293,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TicTacToe/TicTacToe.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G56QYJ7ZRJ;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cumulations.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cumulations.TicTacToe1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,14 +315,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TicTacToe/TicTacToe.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G56QYJ7ZRJ;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cumulations.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cumulations.TicTacToe1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
